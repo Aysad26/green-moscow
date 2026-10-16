@@ -89,3 +89,11 @@
 .loader-mark{width:22px;height:22px;border-radius:3px;background:#718364;animation:loader-breathe 1.1s ease-in-out infinite alternate}
 @keyframes loader-breathe{from{opacity:.3;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
 @media(prefers-reduced-motion:reduce){.loader-mark{animation:none;opacity:.65}}
+/* True semicircle: horizontal radius is half the width, vertical radius the full height. */
+.hero-arch{height:auto!important;aspect-ratio:2/1;border-radius:50% 50% 0 0 / 100% 100% 0 0}
+.sector-backdrop{transform:none}
+@media(min-width:1101px){
+ .invitation .kolomenskoye-scene{grid-column:1;grid-row:1}
+ .invitation .section-copy{grid-column:2;grid-row:1;position:relative;z-index:2;min-width:0}
+ .invitation .landmark-caption{z-index:2}
+}
