@@ -7,12 +7,13 @@
 <title>Зелёные острова Москвы — деревянный атлас</title>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/golos-text-vf.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="content.css?v=wooden-atlas-3">
-<link rel="stylesheet" href="hero.css?v=wooden-atlas-3">
-<link rel="stylesheet" href="style.css?v=wooden-atlas-3">
+<link rel="stylesheet" href="content.css?v=wooden-layout-5">
+<link rel="stylesheet" href="hero.css?v=wooden-layout-5">
+<link rel="stylesheet" href="style.css?v=wooden-layout-5">
+<link rel="stylesheet" href="layout.css?v=wooden-layout-5">
 <script>window.woodBootTimer=setTimeout(()=>{document.documentElement.classList.remove('is-loading');document.getElementById('loader')?.setAttribute('hidden','');document.getElementById('scene-state').textContent='Деревянная Москва';document.querySelectorAll('[data-replay]').forEach(b=>b.hidden=true)},12000)</script>
-<script src="content.js?v=wooden-atlas-3" defer></script>
-<script type="module" src="app.js?v=wooden-atlas-3"></script>
+<script src="content.js?v=wooden-layout-5" defer></script>
+<script type="module" src="app.js?v=wooden-layout-5"></script>
 </head><body>
 <div class="loader" id="loader" role="status" aria-label="Загружаем деревянный город">
     <div class="loader-top"><span>ЗЕЛЁНЫЕ ОСТРОВА МОСКВЫ</span><span class="loader-number" id="load-percent" aria-hidden="true">00</span></div>
@@ -20,8 +21,7 @@
     <div class="loader-bottom"><p>Большой город.<br><span>Маленькие детали.</span></p><div class="load-line"><span id="load-line"></span></div><span class="loader-label">СОБИРАЕМ ВСЁ НЕОБХОДИМОЕ</span></div>
   </div><a class="skip-link" href="#about">Перейти к содержанию</a><header class="header"><div class="container header-inner">
     <a class="brand" href="#top" aria-label="Зелёные острова Москвы — начало">
-        <svg class="brand-symbol" viewBox="0 0 48 48" aria-hidden="true"><path d="M2 2h21v21H2Z" fill="#6e8466"/><path d="M27 2a21 21 0 0 1 21 21H27Z" fill="#b7836d"/><path d="M2 27h21a21 21 0 0 1-21 21Z" fill="#b79b63"/><circle cx="37.5" cy="37.5" r="10.5" fill="#a9b69a"/></svg>
-        <span>ЗЕЛЁНЫЕ ОСТРОВА<span class="brand-second">МОСКВЫ</span></span>
+        <img class="organizer-brand" src="assets/organizer.webp" alt="Заповедное посольство" width="136" height="156">
       </a>
     <nav class="desktop-nav" aria-label="Основная навигация"><a href="#about">Об акции</a><a href="#how">Как участвовать</a><a href="#atlas">Карта островов</a><a href="#contacts">Контакты</a></nav>
     <a class="header-cta" href="#how">Рассказать свою историю</a>
@@ -30,13 +30,13 @@
   </div></header><main><div class="opening"><section class="hero" id="top" aria-labelledby="hero-title"><div class="hero-inner">
       <div class="hero-copy">
         <p class="eyebrow"><span class="tiny-block" aria-hidden="true"></span> ГОРОДСКОЙ ПРИРОДНЫЙ АТЛАС</p>
-        <h1 id="hero-title">Зелёные <br>острова<br><span>Москвы</span><svg class="title-sprout" viewBox="0 0 64 74" aria-hidden="true"><path d="M31 72V36" stroke="currentColor" stroke-width="4"/><path d="M31 43C8 43 0 28 1 13c23 0 32 11 30 30ZM32 31C32 11 45 1 63 2c1 20-11 31-31 29Z" fill="currentColor"/></svg></h1>
+        <h1 id="hero-title">Зелёные <br class="mobile-title-break">острова<br><span>Москвы</span></h1>
         <p class="intro">Большой город складывается<br class="desktop-br"> из маленьких зелёных историй.<br>Какой будет твоя?</p>
         <div class="actions"><button class="button" data-questionnaire>Рассказать о месте</button><a class="button button-secondary" href="#atlas">Карта островов</a></div>
         
       </div>
 
-      <div class="scene-column">
+      <div class="hero-arch" aria-hidden="true"></div><div class="scene-column">
         
         <div class="scene-stage" id="scene-stage">
           <img class="scene-fallback" id="scene-fallback" src="assets/island-fallback.webp" alt="Минималистичная деревянная Москва: кремлёвская башня, рощицы из кубиков и конусов, река и арочный мост" width="960" height="780">
@@ -55,7 +55,7 @@
       <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" aria-label="Остановить фоновые анимации"><span aria-hidden="true">Ⅱ</span><span id="motion-label">Пауза</span></button>
     </section></div><section class="about section-paper" id="about" aria-labelledby="about-title">
       <div class="container split-grid">
-        <figure class="landmark-scene wood-island vdnh-scene" data-scene aria-label="Деревянный островок: ВДНХ"><img class="landmark-image" src="assets/wood/vdnh.webp" alt="ВДНХ: островок из деревянных кубиков, арок и конусов" width="1536" height="1024" loading="lazy"><figcaption class="landmark-caption"><span>ВДНХ</span><span>55°49′ с. ш. · 37°38′ в. д.</span></figcaption></figure><div class="section-copy">
+        <figure class="landmark-scene wood-island vdnh-scene" data-scene aria-label="Деревянный островок: ВДНХ"><div class="island-shape checker-backdrop" aria-hidden="true"><span></span><span></span></div><img class="landmark-image" src="assets/wood/vdnh.webp" alt="ВДНХ: островок из деревянных кубиков, арок и конусов" width="1536" height="1024" loading="lazy"><figcaption class="landmark-caption"><span>ВДНХ</span><span>55°49′ с. ш. · 37°38′ в. д.</span></figcaption></figure><div class="section-copy">
           <p class="eyebrow reveal">ОБ АКЦИИ</p><h2 class="reveal" id="about-title">У каждого свой<br><em>зелёный остров</em></h2>
           <p class="reveal">В одном и том же парке кто-то любит гулять, кто-то наблюдает за птицами, а кто-то знает укромное место, где особенно красиво осенью.</p>
           <p class="reveal">Нам интересно, какие уголки природы Москвы любишь ты. Что в них замечаешь, что тебе нравится и что, возможно, хотелось бы изменить.</p>
@@ -74,7 +74,7 @@
           </ol>
           <div class="reveal how-actions"><div class="participation-actions"><button class="button" data-questionnaire>Заполнить анкету</button><button class="button button-outline" data-document="Условия участия">Условия участия</button></div><p class="small-note">После проверки и при наличии разрешения на публикацию материалы смогут появиться на карте.</p></div>
         </div>
-        <figure class="landmark-scene wood-island tsaritsyno-scene" data-scene aria-label="Деревянный островок: Царицыно"><img class="landmark-image" src="assets/wood/tsaritsyno.webp" alt="Царицыно: островок из деревянных кубиков, арок и конусов" width="1536" height="1024" loading="lazy"><figcaption class="landmark-caption"><span>ЦАРИЦЫНО</span><span>55°36′ с. ш. · 37°41′ в. д.</span></figcaption></figure></div>
+        <figure class="landmark-scene wood-island tsaritsyno-scene" data-scene aria-label="Деревянный островок: Царицыно"><div class="island-shape arch-backdrop" aria-hidden="true"><svg viewBox="0 0 700 700"><path pathLength="1" d="M80 700V350a270 270 0 0 1 540 0v350" fill="none" stroke="currentColor" stroke-width="160"/></svg></div><img class="landmark-image" src="assets/wood/tsaritsyno.webp" alt="Царицыно: островок из деревянных кубиков, арок и конусов" width="1536" height="1024" loading="lazy"><figcaption class="landmark-caption"><span>ЦАРИЦЫНО</span><span>55°36′ с. ш. · 37°41′ в. д.</span></figcaption></figure></div>
     </section>
     <section class="ticker ticker-atlas" aria-label="Любимые места. Живые истории. Общая карта."><div class="ticker-window" aria-hidden="true" data-loop><div class="ticker-track"><div class="ticker-group"><span>ЛЮБИМЫЕ МЕСТА</span><i class="marquee-shape shape-arch"></i><span>ЖИВЫЕ ИСТОРИИ</span><i class="marquee-shape shape-quarter"></i><span>ОБЩАЯ КАРТА</span><i class="marquee-shape shape-checker"></i></div><div class="ticker-group"><span>ЛЮБИМЫЕ МЕСТА</span><i class="marquee-shape shape-arch"></i><span>ЖИВЫЕ ИСТОРИИ</span><i class="marquee-shape shape-quarter"></i><span>ОБЩАЯ КАРТА</span><i class="marquee-shape shape-checker"></i></div></div></div></section>
     <section class="atlas section-white" id="atlas" aria-labelledby="atlas-title">
@@ -100,7 +100,7 @@
         <p class="map-status sr-only" id="map-status" aria-live="polite"></p>
       </div>
     </section>
-    <section class="invitation" aria-labelledby="invitation-title"><div class="container split-grid"><div class="section-copy"><p class="eyebrow reveal">ГОРОД НАЧИНАЕТСЯ С ТЕБЯ</p><h2 class="final-title reveal" id="invitation-title">А где твой<br><em>зелёный остров?</em></h2><p class="reveal">Поделись своим местом — и помоги кому-то открыть зелёную Москву заново.</p><div class="reveal"><button class="button" data-questionnaire>Рассказать о своём острове</button></div></div><figure class="landmark-scene wood-island kolomenskoye-scene" data-scene aria-label="Деревянный островок: Коломенское"><img class="landmark-image" src="assets/wood/kolomenskoye.webp" alt="Коломенское: островок из деревянных кубиков, арок и конусов" width="1536" height="1024" loading="lazy"><figcaption class="landmark-caption"><span>КОЛОМЕНСКОЕ</span><span>55°40′ с. ш. · 37°40′ в. д.</span></figcaption></figure></div></section>
+    <section class="invitation" aria-labelledby="invitation-title"><div class="container split-grid"><div class="section-copy"><p class="eyebrow reveal">ГОРОД НАЧИНАЕТСЯ С ТЕБЯ</p><h2 class="final-title reveal" id="invitation-title">А где твой<br><em>зелёный остров?</em></h2><p class="reveal">Поделись своим местом — и помоги кому-то открыть зелёную Москву заново.</p><div class="reveal"><button class="button" data-questionnaire>Рассказать о своём острове</button></div></div><figure class="landmark-scene wood-island kolomenskoye-scene" data-scene aria-label="Деревянный островок: Коломенское"><div class="island-shape sector-backdrop" aria-hidden="true"><span></span></div><img class="landmark-image" src="assets/wood/kolomenskoye.webp" alt="Коломенское: островок из деревянных кубиков, арок и конусов" width="1536" height="1024" loading="lazy"><figcaption class="landmark-caption"><span>КОЛОМЕНСКОЕ</span><span>55°40′ с. ш. · 37°40′ в. д.</span></figcaption></figure></div></section>
   </main><footer class="footer" id="contacts"><div class="container"><div class="footer-top"><div><p class="eyebrow">ЗЕЛЁНЫЕ ОСТРОВА МОСКВЫ</p><h2>Глазами детей и молодёжи</h2></div><p>Проект Движения<br>«Друзья заповедных островов»</p></div><div class="contacts"><div><h3>Елена Книжникова</h3><details class="contact-role" open><summary>Роль в проекте</summary><p>Руководитель оргкомитета Слёта<br>Председатель Движения<br>«Друзья заповедных островов»</p></details><a href="tel:+79853657679">+7 (985) 365-76-79</a><a href="mailto:friendszap@gmail.com">friendszap@gmail.com</a></div><div><h3>Екатерина Овчинникова</h3><details class="contact-role" open><summary>Роль в проекте</summary><p>Региональный директор Слёта<br>Директор МКУ «Городское<br>зелёное строительство»</p></details><a href="tel:+79129811335">+7 (912) 981-13-35</a><a href="mailto:kama_74@list.ru">kama_74@list.ru</a></div><div><h3>Елена Колеченок</h3><details class="contact-role" open><summary>Роль в проекте</summary><p>Программный директор Слёта</p></details><a href="tel:+79216205976">+7 (921) 620-59-76</a><a href="mailto:info@ekalechenok.ru">info@ekalechenok.ru</a></div></div><div class="footer-bottom"><img class="footer-organizer" src="assets/organizer.webp" alt="Движение друзей заповедных островов" width="53" height="60" loading="lazy"><div class="documents"><button data-document="Положение об акции">Положение об акции</button><button data-document="Согласие на публикацию">Согласие на публикацию</button><button data-document="Политика конфиденциальности">Политика конфиденциальности</button></div><img class="developer-logo" src="assets/developer.svg" alt="Логотип разработчика" width="62" height="42" loading="lazy"></div></div></footer>
   <dialog class="dialog" id="questionnaire" aria-labelledby="form-title"><button class="close-dialog" aria-label="Закрыть анкету" data-close-dialog>×</button><div id="form-body"><p class="eyebrow">ТВОЯ ИСТОРИЯ МЕНЯЕТ КАРТУ</p><h2 id="form-title">Расскажи о своём острове</h2><p class="dialog-intro">Попробуй заполнить короткую анкету.</p><p class="demo-notice">Демонстрационная версия: данные никуда не отправляются.</p><form id="island-form"><div class="form-grid"><label>Как тебя зовут?<input name="name" required maxlength="50" autocomplete="given-name" placeholder="Имя"></label><label>Сколько тебе лет?<input name="age" required type="number" min="7" max="25" inputmode="numeric" placeholder="7–25"></label></div><label>Твой зелёный остров<input name="place" required maxlength="120" placeholder="Название парка, сквера или другого места"></label><label>Что тебе здесь нравится?<textarea name="story" required minlength="10" maxlength="1500" rows="4" placeholder="Расскажи о своём любимом месте…"></textarea></label><label class="checkbox"><input name="consent" type="checkbox" required><span>Я понимаю, что это демонстрация анкеты и мои ответы не будут опубликованы.</span></label><button class="button" type="submit">Посмотреть свою историю</button></form></div><div id="form-success" hidden><p class="eyebrow">ТВОЙ ЗЕЛЁНЫЙ ОСТРОВ</p><h2 id="draft-place"></h2><p class="draft-author" id="draft-author"></p><blockquote id="draft-story"></blockquote><p class="demo-notice">Это предпросмотр. История не отправлена и не опубликована.</p><button class="button" data-close-dialog>Готово</button></div></dialog>
   <dialog class="dialog filters-dialog" id="filters-dialog" aria-labelledby="filters-title"><button class="close-dialog" aria-label="Закрыть фильтры" data-close-dialog>×</button><p class="eyebrow">КАРТА ОСТРОВОВ</p><h2 id="filters-title">Фильтры</h2><div id="mobile-filter-slot"></div><div class="filter-dialog-actions"><button class="filter-reset" id="filter-dialog-reset">Сбросить</button><button class="button" id="filter-apply">Применить</button></div></dialog>
