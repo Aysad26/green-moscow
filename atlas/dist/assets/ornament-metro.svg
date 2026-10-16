@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>Метро — геометрические розетки</title>
+  <g stroke="#366d52" stroke-width="1.8" stroke-linejoin="miter">
+    <path d="M20 4H44L60 20V44L44 60H20L4 44V20Z"/>
+    <path d="m32 13 19 19-19 19-19-19ZM32 4V24M32 40V60M4 32H24M40 32H60M12 12 26 26M38 38 52 52M52 12 38 26M26 38 12 52"/>
+    <path d="m32 25 7 7-7 7-7-7ZM0 32H4M60 32H64M32 0V4M32 60V64"/>
+  </g>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "font": "Golos Text",
+  "paper": "#fdfdfa",
+  "ink": "#26483d",
+  "action": "#3d6651",
+  "edition": "watercolor",
+  "source": "Moscow_Watercolor_Scrap_Kit.zip",
+  "miniatures": [
+    "vdnh",
+    "tsaritsyno",
+    "kolomenskoye"
+  ]
+}

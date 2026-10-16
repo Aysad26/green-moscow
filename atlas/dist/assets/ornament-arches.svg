@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none">
+  <title>Кокошники — ажурная сетка</title>
+  <defs>
+    <path id="arch" d="M0 48V32H8V24L24 8 40 24V32H48V48M8 48V36L24 20 40 36V48"/>
+  </defs>
+  <g stroke="#366d52" stroke-width="1.7" stroke-linejoin="miter">
+    <use href="#arch"/><use href="#arch" x="48"/>
+    <use href="#arch" x="-24" y="48"/><use href="#arch" x="24" y="48"/><use href="#arch" x="72" y="48"/>
+  </g>
+</svg>

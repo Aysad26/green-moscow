@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120" fill="none">
+  <defs><filter id="grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency=".65" numOctaves="2" seed="11" result="noise"/><feColorMatrix in="noise" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  .04 .04 .04 0 .87" result="density"/><feComposite in="SourceGraphic" in2="density" operator="in"/></filter></defs>
+  <g filter="url(#grain)">
+    <path d="M17 63C45 36 153 17 284 18c142-3 255 15 297 43-28 24-142 42-286 41C153 104 53 88 17 63Z" fill="#dce3cd"/>
+    <path d="M60 63c75-21 174-26 260-24 105 1 172 10 218 24-68 21-158 25-254 24C181 87 109 79 60 63Z" fill="#e9e7d8"/>
+    <path d="M42 69c62 18 151 27 240 27 102 1 198-8 261-24" stroke="#788b69" stroke-opacity=".22" stroke-width="1.2"/>
+    <path d="m97 61 9-2m66 17 6 1m58-24 8-1m117 21 7 1m84-15 9 1m-47 24 6-1" stroke="#788b69" stroke-opacity=".3" stroke-width="1.3" stroke-linecap="round"/>
+  </g>
+</svg>

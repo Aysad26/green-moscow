@@ -1,0 +1,198 @@
+{
+  "canvas": {
+    "width": 2508,
+    "height": 2508
+  },
+  "duration": 10,
+  "fps": 30,
+  "alpha_note": "Alpha is baked into every pixel. Import layers at 100% opacity, Normal blend.",
+  "layers": [
+    {
+      "id": "paper",
+      "label": "Акварельная бумага",
+      "file": "00_paper.png",
+      "z": 0,
+      "x": 0,
+      "y": 0,
+      "width": 2508,
+      "height": 2508,
+      "depth": 0
+    },
+    {
+      "id": "sun_circle",
+      "label": "Полупрозрачный акварельный круг",
+      "file": "01_sun_circle.png",
+      "z": 1,
+      "x": 1256,
+      "y": 354,
+      "width": 808,
+      "height": 808,
+      "depth": 0.12
+    },
+    {
+      "id": "coral_rectangle_left",
+      "label": "Полупрозрачный левый прямоугольник",
+      "file": "02_coral_rectangle_left.png",
+      "z": 2,
+      "x": 544,
+      "y": 608,
+      "width": 450,
+      "height": 660,
+      "depth": 0.12
+    },
+    {
+      "id": "coral_rectangle_middle",
+      "label": "Полупрозрачный средний прямоугольник",
+      "file": "03_coral_rectangle_middle.png",
+      "z": 3,
+      "x": 976,
+      "y": 754,
+      "width": 500,
+      "height": 550,
+      "depth": 0.12
+    },
+    {
+      "id": "blue_rectangle",
+      "label": "Полупрозрачный голубой прямоугольник",
+      "file": "04_blue_rectangle.png",
+      "z": 4,
+      "x": 1996,
+      "y": 950,
+      "width": 308,
+      "height": 496,
+      "depth": 0.12
+    },
+    {
+      "id": "cloud_1",
+      "label": "Полупрозрачное облако 1",
+      "file": "05_cloud_1.png",
+      "z": 5,
+      "x": 116,
+      "y": 448,
+      "width": 730,
+      "height": 340,
+      "depth": 0.2
+    },
+    {
+      "id": "cloud_2",
+      "label": "Полупрозрачное облако 2",
+      "file": "06_cloud_2.png",
+      "z": 6,
+      "x": 1052,
+      "y": 612,
+      "width": 540,
+      "height": 212,
+      "depth": 0.2
+    },
+    {
+      "id": "cloud_3",
+      "label": "Полупрозрачное облако 3",
+      "file": "07_cloud_3.png",
+      "z": 7,
+      "x": 1894,
+      "y": 612,
+      "width": 568,
+      "height": 278,
+      "depth": 0.2
+    },
+    {
+      "id": "wc_reflection",
+      "label": "Мягкое отражение без потёков",
+      "file": "08_wc_reflection.png",
+      "z": 8,
+      "x": 88,
+      "y": 1600,
+      "width": 2350,
+      "height": 440,
+      "depth": 0.4
+    },
+    {
+      "id": "wc_water",
+      "label": "Акварельная поверхность реки",
+      "file": "09_wc_water.png",
+      "z": 9,
+      "x": 1040,
+      "y": 1272,
+      "width": 980,
+      "height": 368,
+      "depth": 0.5
+    },
+    {
+      "id": "wc_back_trees",
+      "label": "Дальний план — деревья",
+      "file": "10_wc_back_trees.png",
+      "z": 10,
+      "x": 126,
+      "y": 814,
+      "width": 2292,
+      "height": 640,
+      "depth": 0.45
+    },
+    {
+      "id": "wc_tower",
+      "label": "Спасская башня — целиком",
+      "file": "11_wc_tower.png",
+      "z": 11,
+      "x": 786,
+      "y": 196,
+      "width": 300,
+      "height": 1114,
+      "depth": 0.5
+    },
+    {
+      "id": "wc_cathedral",
+      "label": "Собор Василия Блаженного — целиком",
+      "file": "12_wc_cathedral.png",
+      "z": 12,
+      "x": 1488,
+      "y": 600,
+      "width": 440,
+      "height": 730,
+      "depth": 0.55
+    },
+    {
+      "id": "wc_banks",
+      "label": "Берега и газон",
+      "file": "13_wc_banks.png",
+      "z": 13,
+      "x": 88,
+      "y": 1416,
+      "width": 2350,
+      "height": 220,
+      "depth": 0.65
+    },
+    {
+      "id": "wc_bridge",
+      "label": "Полный мост",
+      "file": "14_wc_bridge.png",
+      "z": 14,
+      "x": 1134,
+      "y": 1290,
+      "width": 660,
+      "height": 198,
+      "depth": 0.75
+    },
+    {
+      "id": "wc_left_trees",
+      "label": "Передний план — левая роща",
+      "file": "15_wc_left_trees.png",
+      "z": 15,
+      "x": 108,
+      "y": 814,
+      "width": 1060,
+      "height": 700,
+      "depth": 0.9
+    },
+    {
+      "id": "wc_right_trees",
+      "label": "Передний план — правая зелень",
+      "file": "16_wc_right_trees.png",
+      "z": 16,
+      "x": 1632,
+      "y": 960,
+      "width": 780,
+      "height": 550,
+      "depth": 0.95
+    }
+  ]
+}

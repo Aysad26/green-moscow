@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f1e6">
+  <meta name="description" content="Зелёные острова Москвы глазами детей и молодёжи. Расскажи о любимом месте и открой город заново.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Зелёные острова Москвы — Гравюрный атлас</title>
+  <link rel="preload" href="assets/wix-madefor-text-vf.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/lora-italic-vf.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/wix-madefor-display-vf.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="engraving.css?v=20261016-craft-motion">
+  <script>try{document.documentElement.classList.add('is-preloading');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('hero-pending');window.gmBootFallback=setTimeout(()=>{document.documentElement.classList.remove('hero-pending','is-preloading');const loader=document.getElementById('page-loader');if(loader)loader.hidden=true;document.querySelectorAll('.header,main,.footer').forEach(n=>n.inert=false);document.querySelectorAll('.is-waiting').forEach(n=>n.classList.remove('is-waiting'))},5000)}catch{}</script>
+  <script src="app.js?v=20261016-craft-motion" defer></script>
+</head>
+<body>
+  <svg class="ambient-defs" id="ambient-filters" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+  <clipPath id="water-edge" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.50C.995 .69 .9 .84 .74 .92C.59 .99 .42 1 .28 .94C.16 .88 .10 .77 .06 .61Q.025 .52 .055 .43L.17 0Z"/></clipPath>
+  <clipPath id="tree-edge" clipPathUnits="objectBoundingBox"><path d="M0 0H1V.83C.99 .89 .94 .93 .84 .94C.72 .98 .63 .982 .52 .973C.36 .978 .15 .955 .055 .91Q0 .884 0 .835Z"/></clipPath>
+  <filter id="water-ripple" x="-2%" y="-3%" width="104%" height="106%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency=".012 .07" numOctaves="1" seed="11" stitchTiles="stitch" result="waves"><animate attributeName="baseFrequency" values=".012 .07;.014 .075;.012 .07" dur="14s" repeatCount="indefinite"/></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="waves" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="leaves-ripple" x="-1%" y="-1%" width="102%" height="102%" color-interpolation-filters="sRGB">
+    <feTurbulence type="fractalNoise" baseFrequency=".018 .025" numOctaves="1" seed="23" stitchTiles="stitch" result="breeze"><animate attributeName="baseFrequency" values=".018 .025;.021 .029;.018 .025" dur="11s" repeatCount="indefinite"/></feTurbulence>
+    <feDisplacementMap in="SourceGraphic" in2="breeze" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</defs></svg>
+  <div class="page-loader" id="page-loader" role="status" aria-label="Загружаем город">
+    <div class="loader-content"><span class="loader-spinner" aria-hidden="true"></span><p class="loader-caption">Загрузка…</p></div>
+  </div>
+  <a class="skip-link" href="#about">Перейти к содержанию</a>
+  <header class="header"><div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Зелёные острова Москвы — на начало"><img src="assets/organizer.webp" alt="Заповедное посольство. Движение друзей заповедных островов" width="76" height="86"></a>
+    <nav class="desktop-nav" aria-label="Основная навигация"><a href="#about">Об акции</a><a href="#how">Как участвовать</a><a href="#atlas">Карта островов</a><a href="#contacts">Контакты</a></nav>
+    <a class="header-cta" href="#how">Рассказать свою историю</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню"><span></span><span></span></button>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Мобильная навигация" hidden><a href="#about">Об акции</a><a href="#how">Как участвовать</a><a href="#atlas">Карта островов</a><a href="#contacts">Контакты</a></nav>
+  </div></header>
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-part" style="--delay:40ms">ГОРОДСКОЙ ПРИРОДНЫЙ АТЛАС</p>
+          <h1 id="hero-title" class="hero-part" style="--delay:100ms">Зелёные острова<br><span>Москвы</span></h1>
+          <div class="hero-intro hero-part" style="--delay:220ms"><p>Расскажи о любимом парке или сквере. Вместе соберём карту зелёной Москвы — такой, какой её видишь ты.</p></div>
+          <div class="actions hero-part" style="--delay:330ms"><button class="button" data-questionnaire>Рассказать о месте</button><a class="button button-secondary" href="#atlas">Карта островов</a></div>
+        </div>
+        <div class="city-column"><div class="city" data-loop data-ripple role="img" aria-label="Гравюрная Москва: Кремлёвская башня, храм, зелёные берега, мост и неподвижный теплоход на реке">
+          <div class="city-layer city-geometry city-disc-green" style="--delay:1600ms"></div>
+          <div class="city-layer city-geometry city-disc-rust" style="--delay:1740ms"></div>
+          <div class="city-layer city-geometry city-halftone" style="--delay:1840ms"></div>
+          <img class="city-layer city-water" style="left:21.9298%;top:55.0239%;width:73.7640%;height:35.6459%;--delay:0ms;--y:16px;--origin:50% 100%" src="assets/engraving/engrave_water.webp" alt="" width="1850" height="894" fetchpriority="high"><img class="city-layer city-grow" style="left:5.5821%;top:30.3429%;width:84.9282%;height:30.6619%;--delay:130ms;--y:16px;--origin:50% 100%" src="assets/engraving/engrave_back_trees.webp" alt="" width="2130" height="769" fetchpriority="auto"><img class="city-layer city-grow" style="left:22.7273%;top:15.1515%;width:26.9537%;height:46.6507%;--delay:270ms;--y:16px;--origin:50% 100%" src="assets/engraving/engrave_tower.webp" alt="" width="676" height="1170" fetchpriority="high"><img class="city-layer city-grow" style="left:58.2137%;top:22.5678%;width:28.5486%;height:41.4673%;--delay:380ms;--y:16px;--origin:50% 100%" src="assets/engraving/engrave_cathedral.webp" alt="" width="716" height="1040" fetchpriority="high"><img class="city-layer" style="left:13.1579%;top:59.4498%;width:83.7321%;height:17.2648%;--delay:50ms;--y:16px;--origin:50% 100%" src="assets/engraving/engrave_banks.webp" alt="" width="2100" height="433" fetchpriority="auto"><img class="city-layer" style="left:12.4402%;top:59.0909%;width:50.0797%;height:14.0351%;--delay:180ms;--y:16px;--origin:50% 100%" src="assets/engraving/engrave_bridge.webp" alt="" width="1256" height="352" fetchpriority="auto"><img class="city-layer city-grow city-front-trees" style="left:1.7544%;top:42.2249%;width:38.8357%;height:36.6427%;--delay:480ms;--y:16px;--origin:50% 100%" src="assets/engraving/engrave_left_trees.webp" alt="" width="974" height="919" fetchpriority="auto"><img class="city-layer city-grow" style="left:62.5199%;top:57.1372%;width:35.8852%;height:17.0255%;--delay:570ms;--y:16px;--origin:50% 100%" src="assets/engraving/engrave_right_trees.webp" alt="" width="900" height="427" fetchpriority="auto"><img class="city-layer city-boat" style="left:52.6316%;top:72.7273%;width:17.8628%;height:8.9314%;--delay:690ms;--y:0px;--origin:50% 100%" src="assets/engraving/engrave_boat.webp" alt="" width="448" height="224" fetchpriority="auto"><img class="city-layer" style="left:54.2265%;top:12.0415%;width:7.1770%;height:7.2967%;--delay:760ms;--y:16px;--origin:50% 100%" src="assets/engraving/bird_1.webp" alt="" width="180" height="183" fetchpriority="auto"><img class="city-layer" style="left:50.3987%;top:20.3349%;width:5.1037%;height:4.2265%;--delay:840ms;--y:16px;--origin:50% 100%" src="assets/engraving/bird_2.webp" alt="" width="128" height="106" fetchpriority="auto"><img class="city-layer" style="left:56.1404%;top:26.0766%;width:5.1037%;height:5.0638%;--delay:920ms;--y:16px;--origin:50% 100%" src="assets/engraving/bird_3.webp" alt="" width="128" height="127" fetchpriority="auto">
+        </div><div class="round-label hero-ring" data-loop aria-hidden="true"><svg class="round-label-text" viewBox="0 0 140 140"><defs><path id="hero-ring" d="M70,70 m-53,0 a53,53 0 1,1 106,0 a53,53 0 1,1 -106,0"/></defs><text textLength="324" lengthAdjust="spacing"><textPath href="#hero-ring">ЗАМЕЧАЙ ПРИРОДУ • ОТКРЫВАЙ МОСКВУ •</textPath></text></svg><span class="ring-center">✳</span></div></div>
+        <p class="hero-footnote hero-part" style="--delay:450ms"><span>55°45′ с. ш. · 37°37′ в. д.</span><span>В привычном городе — новые открытия</span></p>
+      </div>
+    </section>
+    <section class="ticker" aria-label="Смотри вокруг. Замечай природу. Делись открытиями.">
+      <div class="ticker-window" aria-hidden="true" data-loop><div class="ticker-track"><div class="ticker-group"><span>СМОТРИ ВОКРУГ</span><i>✳</i><span>ЗАМЕЧАЙ ПРИРОДУ</span><i>✳</i><span>ДЕЛИСЬ ОТКРЫТИЯМИ</span><i>✳</i></div><div class="ticker-group"><span>СМОТРИ ВОКРУГ</span><i>✳</i><span>ЗАМЕЧАЙ ПРИРОДУ</span><i>✳</i><span>ДЕЛИСЬ ОТКРЫТИЯМИ</span><i>✳</i></div></div></div><button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" aria-label="Остановить фоновые анимации"><span aria-hidden="true">Ⅱ</span><span id="motion-label">Пауза</span></button></section>
+    <section class="about section-paper" id="about" aria-labelledby="about-title">
+      <div class="container split-grid">
+        <div class="observer-art composition" data-scene role="img" aria-label="Гравюра: синица на цветущей липе, бинокль и блокнот наблюдателя">
+          <div class="observer-disc layer shape" style="--background-order:0"></div><div class="observer-hatch layer shape" style="--background-order:1"></div>
+          <img class="observer-image layer" style="--order:0" src="assets/engraving/observer-blank-pages.webp" alt="" width="1254" height="1254" loading="lazy">
+          <svg class="observer-illustrations layer" style="--order:0" viewBox="0 0 1254 1254" aria-hidden="true" focusable="false">
+  <defs><mask id="notebook-drawing" maskUnits="userSpaceOnUse" x="0" y="0" width="1254" height="1254">
+    <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+      <path class="notebook-ink" pathLength="1" style="--ink-delay:480ms;--ink-time:1650ms" stroke-width="17" d="M365 1009L348 936Q291 862 275 755Q313 718 371 743Q436 765 460 834Q463 899 447 951Q389 941 348 936M347 939Q287 952 254 992Q305 994 348 945"/>
+      <path class="notebook-ink" pathLength="1" style="--ink-delay:900ms;--ink-time:1500ms" stroke-width="34" d="M280 758Q337 792 451 824M294 799Q337 846 448 872M315 850Q357 898 443 922M277 780L238 846L267 900L321 929M349 938L324 894L298 853L273 811"/>
+      <path class="notebook-ink" pathLength="1" style="--ink-delay:700ms;--ink-time:1700ms" stroke-width="22" d="M614 874Q623 815 672 757Q704 708 729 641M679 751L627 702M673 761L750 729M647 795L590 785M651 793L711 817M631 831L574 837M647 804L662 860"/>
+      <path class="notebook-ink" pathLength="1" style="--ink-delay:1250ms;--ink-time:1450ms" stroke-width="49" d="M716 662Q660 659 624 700L694 673M724 699L770 744L737 713M667 754L626 760L597 792M671 775L693 812L712 838M618 812L580 835L564 817M648 822L660 873"/>
+    </g><path class="notebook-complete" fill="white" d="M257 740L405 719L479 813L471 949L388 959L390 1025L240 1032L205 873Z M539 727L629 655L736 620L793 720L773 852L670 907L545 882Z"/>
+  </mask></defs>
+  <image href="assets/engraving/observer.webp" width="1254" height="1254" mask="url(#notebook-drawing)"/>
+</svg>
+          <div class="round-label observer-ring" data-loop aria-hidden="true"><svg class="round-label-text" viewBox="0 0 140 140"><defs><path id="observer-ring" d="M70,70 m-53,0 a53,53 0 1,1 106,0 a53,53 0 1,1 -106,0"/></defs><text textLength="324" lengthAdjust="spacing"><textPath href="#observer-ring">УВИДЕТЬ • ЗАМЕТИТЬ • ПОДЕЛИТЬСЯ •</textPath></text></svg><span class="ring-center">✳</span></div>
+        </div>
+        <div class="section-copy">
+          <p class="eyebrow reveal">ОБ АКЦИИ</p><h2 class="reveal" id="about-title">У каждого свой<br><em>зелёный остров</em></h2>
+          <p class="reveal">В одном и том же парке кто-то любит гулять, кто-то наблюдает за птицами, а кто-то знает укромное место, где особенно красиво осенью.</p>
+          <p class="reveal">Нам интересно, какие уголки природы Москвы любишь ты. Что в них замечаешь, что тебе нравится и что, возможно, хотелось бы изменить.</p>
+          <p class="lead reveal">Мы соберём ваши истории, фотографии и рисунки на одной карте.</p>
+        </div>
+      </div>
+    </section>
+    <section class="how section-white" id="how" aria-labelledby="how-title">
+      <div class="container split-grid">
+        <div class="section-copy">
+          <p class="eyebrow reveal">КАК ПРИНЯТЬ УЧАСТИЕ</p><h2 class="reveal" id="how-title">Расскажи<br><em>о своём месте</em></h2><p class="muted reveal">Это просто и займёт около 5–7 минут</p>
+          <ol class="steps">
+            <li class="reveal"><span class="step-icon" aria-hidden="true"><img src="assets/icon-binoculars.svg" alt="" width="32" height="32"></span><div><h3>Найди свой остров</h3><p>Выбери на карте парк, сквер, лес или другое природное место.</p></div></li>
+            <li class="reveal"><span class="step-icon" aria-hidden="true"><img src="assets/icon-dialogue.svg" alt="" width="32" height="32"></span><div><h3>Поделись наблюдениями</h3><p>Расскажи, что тебе здесь нравится и что ты замечаешь.</p></div></li>
+            <li class="reveal"><span class="step-icon" aria-hidden="true"><img src="assets/icon-paperclip.svg" alt="" width="32" height="32"></span><div><h3>Добавь свою историю</h3><p>По желанию прикрепи фотографию, рисунок или небольшой рассказ.</p></div></li>
+          </ol>
+          <div class="reveal how-actions"><div class="participation-actions"><button class="button" data-questionnaire>Заполнить анкету</button><button class="button button-outline" data-document="Условия участия">Условия участия</button></div><p class="small-note">После проверки и при наличии разрешения на публикацию материалы смогут появиться на карте.</p></div>
+        </div>
+        <div class="dogs-art composition" data-scene role="img" aria-label="Гравюра: две собаки знакомятся на прогулке">
+          <div class="dogs-disc layer shape" style="--background-order:0"></div><div class="dogs-hatch layer shape" style="--background-order:1"></div>
+          <img class="dogs-tree layer" style="--order:0" src="assets/engraving/engrave_back_trees-detail.webp" alt="" width="1000" height="361" loading="lazy">
+          <img class="dogs-image layer" style="--order:1" src="assets/engraving/dogs.webp" alt="" width="1536" height="1024" loading="lazy">
+          <p class="art-caption layer" style="--order:2">ЗНАКОМЫЕ МЕСТА. НОВЫЕ ИСТОРИИ.</p>
+        </div>
+      </div>
+    </section>
+    <section class="ticker ticker-atlas" aria-label="Любимые места. Живые истории. Общая карта."><div class="ticker-window" aria-hidden="true" data-loop><div class="ticker-track"><div class="ticker-group"><span>ЛЮБИМЫЕ МЕСТА</span><i>✳</i><span>ЖИВЫЕ ИСТОРИИ</span><i>✳</i><span>ОБЩАЯ КАРТА</span><i>✳</i></div><div class="ticker-group"><span>ЛЮБИМЫЕ МЕСТА</span><i>✳</i><span>ЖИВЫЕ ИСТОРИИ</span><i>✳</i><span>ОБЩАЯ КАРТА</span><i>✳</i></div></div></div></section>
+    <section class="atlas section-white" id="atlas" aria-labelledby="atlas-title">
+      <div class="container">
+        <div class="atlas-heading"><div><p class="eyebrow reveal">КАРТА ОБЩИХ ОТКРЫТИЙ</p><h2 class="reveal" id="atlas-title">Открой <em>зелёные острова</em><br>Москвы</h2><p class="reveal atlas-intro">У каждого места своя история. Выбирай точки на карте, смотри фотографии и рисунки, читай рассказы участников.</p></div><div class="counters reveal"><div><strong>128</strong><span>участников</span></div><div><strong>24</strong><span>территории</span></div><p>Пример данных</p></div></div>
+        <div class="map-toolbar reveal">
+          <label class="search"><img src="assets/search.svg" width="20" height="20" alt=""><input id="place-search" type="search" placeholder="Найти место на карте" aria-label="Найти место на карте"></label>
+          <button class="filter-trigger" id="filter-trigger" aria-haspopup="dialog" aria-controls="filters-dialog" aria-expanded="false"><img src="assets/icon-filters.svg" alt="" width="20" height="20"><span>Фильтры</span><span class="filter-count" id="filter-count" hidden>0</span></button>
+          <div class="filter-fields-slot" id="filter-fields-slot"><div class="filter-fields" id="filter-fields">
+            <label class="select-label"><span class="filter-label sr-only">Тип территории</span><select id="territory-filter"><option value="all">Все территории</option><option value="park">Парки и скверы</option><option value="water">Водоёмы</option></select></label>
+            <label class="select-label"><span class="filter-label sr-only">Возраст участников</span><select id="age-filter"><option value="all">Любой возраст</option><option value="7-13">7–13 лет</option><option value="14-25">14–25 лет</option></select></label>
+            <label class="select-label period-filter"><span class="filter-label sr-only">Период наблюдений</span><select id="period-filter"><option value="all">Любой сезон</option><option value="spring">Весна</option><option value="summer">Лето</option><option value="autumn">Осень</option><option value="winter">Зима</option></select></label>
+          </div></div>
+          <button class="button map-add" data-questionnaire><span aria-hidden="true">+</span> Добавить свой остров</button>
+        </div>
+        <div class="active-filters" id="active-filters" aria-label="Выбранные фильтры" hidden></div>
+        <div class="map-subbar reveal"><div id="map-tabs-slot"><div class="tabs" role="tablist" aria-label="Материалы территории"><button role="tab" id="tab-stories" aria-controls="place-content" aria-selected="true" tabindex="0" data-tab="stories">Истории</button><button role="tab" id="tab-gallery" aria-controls="place-content" aria-selected="false" tabindex="-1" data-tab="gallery">Галерея</button><button role="tab" id="tab-ideas" aria-controls="place-content" aria-selected="false" tabindex="-1" data-tab="ideas">Идеи заботы</button></div></div><span class="map-demo">Демонстрационная карта</span></div>
+        <div class="map-layout reveal">
+          <div class="map-viewport" aria-label="Карта парка Сокольники с примерами историй"><div class="map-surface" id="map-surface"><img class="map-image" src="assets/map.webp" alt="Карта района парка Сокольники" width="1920" height="1080" loading="lazy"><div class="map-markers" id="map-markers"></div></div><div class="zoom-controls"><button id="zoom-in" aria-label="Приблизить карту">+</button><button id="zoom-out" aria-label="Отдалить карту">−</button></div><div class="map-legend"><span><i></i>История места</span><span>Цифра — число историй</span></div><a class="map-attribution" href="https://yandex.ru/maps/213/moscow/?ll=37.676%2C55.796&amp;z=14" target="_blank" rel="noopener noreferrer">Основа карты © Яндекс ↗</a></div>
+          <div class="place-card-slot" id="place-card-slot"><aside class="place-card" id="place-card" aria-label="Выбранное место"><div class="place-image"><span id="place-type">ПАРК</span><img src="assets/engraving/engrave_left_trees-detail.webp" alt="" width="974" height="919" loading="lazy"></div><div class="place-heading"><h3 id="place-name">Сокольники</h3><p>Одна территория — много историй</p><span id="place-count">12 историй / 8 фотографий</span></div><div id="place-content" role="tabpanel" aria-labelledby="tab-stories" tabindex="0"></div><button class="place-more" id="place-more">Все истории места</button><p class="place-demo">Рассказы и цифры приведены для примера</p></aside></div>
+          <div class="map-empty" id="map-empty" hidden><h3>Такого места пока не нашли</h3><p>Попробуй другое название или сбрось фильтры.</p><button class="button" id="reset-filters">Сбросить фильтры</button></div>
+        </div>
+        <p class="map-status sr-only" id="map-status" aria-live="polite"></p>
+      </div>
+    </section>
+    <section class="invitation" aria-labelledby="invitation-title"><div class="container split-grid"><div class="section-copy"><p class="eyebrow reveal">ГОРОД НАЧИНАЕТСЯ С ТЕБЯ</p><h2 class="final-title reveal" id="invitation-title">А где твой<br><em>зелёный остров?</em></h2><p class="reveal">Поделись своим местом — и помоги кому-то открыть зелёную Москву заново.</p><div class="reveal"><button class="button" data-questionnaire>Рассказать о своём острове</button></div></div><div class="park-art composition" data-scene data-loop data-ripple role="img" aria-label="Гравюра: пустая скамейка под липой и тропинка в глубине парка"><div class="park-disc layer shape" style="--background-order:0"></div><div class="park-lines layer shape" style="--background-order:1"></div><svg class="park-image layer" style="--order:0" viewBox="0 0 1400 991" aria-hidden="true" focusable="false">
+  <defs><linearGradient id="canopy-fade" x1="0" y1="0" x2="0" y2="1"><stop offset=".58" stop-color="white"/><stop offset=".73" stop-color="black"/></linearGradient><mask id="canopy-mask"><rect width="1400" height="991" fill="url(#canopy-fade)"/></mask></defs>
+  <image href="assets/engraving/park.webp" width="1400" height="991"/>
+  <image class="park-canopy" href="assets/engraving/park.webp" width="1400" height="991" mask="url(#canopy-mask)"/>
+</svg><span class="park-caption layer" style="--order:1">МЕСТО ДЛЯ ТВОЕЙ ИСТОРИИ</span></div></div></section>
+  </main>
+  <footer class="footer" id="contacts"><div class="container"><div class="footer-top"><div><p class="eyebrow">ЗЕЛЁНЫЕ ОСТРОВА МОСКВЫ</p><h2>Глазами детей и молодёжи</h2></div><p>Проект Движения<br>«Друзья заповедных островов»</p></div><div class="contacts"><div><h3>Елена Книжникова</h3><details class="contact-role" open><summary>Роль в проекте</summary><p>Руководитель оргкомитета Слёта<br>Председатель Движения<br>«Друзья заповедных островов»</p></details><a href="tel:+79853657679">+7 (985) 365-76-79</a><a href="mailto:friendszap@gmail.com">friendszap@gmail.com</a></div><div><h3>Екатерина Овчинникова</h3><details class="contact-role" open><summary>Роль в проекте</summary><p>Региональный директор Слёта<br>Директор МКУ «Городское<br>зелёное строительство»</p></details><a href="tel:+79129811335">+7 (912) 981-13-35</a><a href="mailto:kama_74@list.ru">kama_74@list.ru</a></div><div><h3>Елена Колеченок</h3><details class="contact-role" open><summary>Роль в проекте</summary><p>Программный директор Слёта</p></details><a href="tel:+79216205976">+7 (921) 620-59-76</a><a href="mailto:info@ekalechenok.ru">info@ekalechenok.ru</a></div></div><div class="footer-bottom"><img class="footer-organizer" src="assets/organizer.webp" alt="Движение друзей заповедных островов" width="53" height="60" loading="lazy"><div class="documents"><button data-document="Положение об акции">Положение об акции</button><button data-document="Согласие на публикацию">Согласие на публикацию</button><button data-document="Политика конфиденциальности">Политика конфиденциальности</button></div><img class="developer-logo" src="assets/developer.svg" alt="Логотип разработчика" width="62" height="42" loading="lazy"></div></div></footer>
+  <dialog class="dialog" id="questionnaire" aria-labelledby="form-title"><button class="close-dialog" aria-label="Закрыть анкету" data-close-dialog>×</button><div id="form-body"><p class="eyebrow">ТВОЯ ИСТОРИЯ МЕНЯЕТ КАРТУ</p><h2 id="form-title">Расскажи о своём острове</h2><p class="dialog-intro">Попробуй заполнить короткую анкету.</p><p class="demo-notice">Демонстрационная версия: данные никуда не отправляются.</p><form id="island-form"><div class="form-grid"><label>Как тебя зовут?<input name="name" required maxlength="50" autocomplete="given-name" placeholder="Имя"></label><label>Сколько тебе лет?<input name="age" required type="number" min="7" max="25" inputmode="numeric" placeholder="7–25"></label></div><label>Твой зелёный остров<input name="place" required maxlength="120" placeholder="Название парка, сквера или другого места"></label><label>Что тебе здесь нравится?<textarea name="story" required minlength="10" maxlength="1500" rows="4" placeholder="Расскажи о своём любимом месте…"></textarea></label><label class="checkbox"><input name="consent" type="checkbox" required><span>Я понимаю, что это демонстрация анкеты и мои ответы не будут опубликованы.</span></label><button class="button" type="submit">Посмотреть свою историю</button></form></div><div id="form-success" hidden><p class="eyebrow">ТВОЙ ЗЕЛЁНЫЙ ОСТРОВ</p><h2 id="draft-place"></h2><p class="draft-author" id="draft-author"></p><blockquote id="draft-story"></blockquote><p class="demo-notice">Это предпросмотр. История не отправлена и не опубликована.</p><button class="button" data-close-dialog>Готово</button></div></dialog>
+  <dialog class="dialog filters-dialog" id="filters-dialog" aria-labelledby="filters-title"><button class="close-dialog" aria-label="Закрыть фильтры" data-close-dialog>×</button><p class="eyebrow">КАРТА ОСТРОВОВ</p><h2 id="filters-title">Фильтры</h2><div id="mobile-filter-slot"></div><div class="filter-dialog-actions"><button class="filter-reset" id="filter-dialog-reset">Сбросить</button><button class="button" id="filter-apply">Применить</button></div></dialog>
+  <dialog class="dialog place-dialog" id="place-dialog" aria-labelledby="place-name"><button class="close-dialog" aria-label="Закрыть информацию о месте" data-close-dialog>×</button><div id="mobile-place-tabs"></div><div id="mobile-place-slot"></div></dialog>
+  <dialog class="dialog document-dialog" id="document-dialog" aria-labelledby="document-title"><button class="close-dialog" aria-label="Закрыть документ" data-close-dialog>×</button><p class="eyebrow">ДОКУМЕНТЫ АКЦИИ</p><h2 id="document-title"></h2><div id="participation-terms" hidden><p class="dialog-intro">Краткие условия для детей и молодёжи 7–25 лет.</p><ul class="terms-list"><li><strong>Одно место или несколько.</strong> О каждом любимом парке, сквере или другом природном месте можно рассказать отдельно.</li><li><strong>Творчество — по желанию.</strong> К истории можно добавить фотографию, рисунок, стихотворение или небольшой рассказ.</li><li><strong>Если тебе нет 18 лет,</strong> понадобится согласие законного представителя.</li><li><strong>Публикация с твоего согласия.</strong> Материалы появляются на карте после модерации и при наличии необходимых согласий.</li><li>Среди участников творческого конкурса планируется розыгрыш заповедных подарков.</li></ul><p class="demo-notice">Это краткое описание. Утверждённое положение об акции пока не подключено к демонстрационной версии.</p></div><div id="document-unavailable"><p>Утверждённый документ пока не подключён к этой демонстрационной версии.</p><p>По вопросам акции свяжись с организаторами.</p></div><a class="button button-outline" href="#contacts" data-close-dialog>Контакты организаторов</a></dialog>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "green-moscow-wooden",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": { "three": "0.180.0" },
+  "devDependencies": { "jsdom": "26.1.0" }
+}

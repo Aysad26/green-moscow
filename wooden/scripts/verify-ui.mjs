@@ -1,0 +1,38 @@
+import {JSDOM,VirtualConsole} from 'jsdom';
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
+const source=readFileSync(new URL('../dist/content.js',import.meta.url),'utf8');
+const scenarios=[];
+for(const mobile of [false,true]){
+  const errors=[];
+  const vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));
+  const dom=new JSDOM(html,{url:'https://wooden.test/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc});
+  const {window:w}=dom;
+  w.matchMedia=query=>({matches:query.includes('prefers-reduced-motion')?false:query.includes('max-width')?mobile:!mobile,addEventListener(){},removeEventListener(){}});
+  w.HTMLDialogElement.prototype.showModal=function(){this.open=true};
+  w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'))};
+  w.eval(source);
+  const $=s=>w.document.querySelector(s),$$=s=>[...w.document.querySelectorAll(s)];
+  assert.equal($$('.map-pin').length,4);
+  assert.equal($('#place-name').textContent,'Сокольники');
+  assert.equal($('#place-card').parentElement.id,mobile?'mobile-place-slot':'place-card-slot');
+  $('#place-search').value='пруд';$('#place-search').dispatchEvent(new w.Event('input'));
+  assert.equal($$('.map-pin').length,1);assert.equal($('#place-name').textContent,'Пруд в Сокольниках');
+  $('#place-search').value='неизвестное место';$('#place-search').dispatchEvent(new w.Event('input'));
+  assert.equal($('#map-empty').hidden,false);$('#reset-filters').click();assert.equal($$('.map-pin').length,4);
+  $('#territory-filter').value='water';$('#territory-filter').dispatchEvent(new w.Event('change'));assert.equal($$('.map-pin').length,1);
+  $('#reset-filters').click();$('#tab-gallery').click();assert($('#place-content img').src.endsWith('/assets/wood/sokolniki.webp'));
+  $('#tab-ideas').click();assert.equal($$('#place-content .story').length,2);
+  $('#tab-stories').click();$('#place-more').click();assert.equal($$('#place-content .story-expanded').length,2);
+  $('#zoom-in').click();assert.match($('#map-surface').style.transform,/1\.25/);$('#zoom-out').click();assert.match($('#map-surface').style.transform,/scale\(1\)/);
+  $('[data-questionnaire]').click();assert($('#questionnaire').open);
+  const form=$('#island-form');form.elements.name.value='<img src=x onerror=alert(1)>';form.elements.age.value='20';form.elements.place.value='Мой парк';form.elements.story.value='Тихая зелёная дорожка вдоль деревьев.';form.elements.consent.checked=true;
+  form.dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));assert.equal($('#form-success').hidden,false);assert.equal($('#draft-place').textContent,'Мой парк');assert(!$('#draft-author img'));
+  $('#questionnaire [data-close-dialog]').click();assert(!$('#questionnaire').open);
+  $('[data-document="Условия участия"]').click();assert($('#document-dialog').open);assert.equal($('#participation-terms').hidden,false);$('#document-dialog').close();
+  $('#motion-toggle').click();assert(w.document.documentElement.classList.contains('motion-paused'));$('#motion-toggle').click();assert(!w.document.documentElement.classList.contains('motion-paused'));
+  assert.equal(errors.length,0,errors.join('\n'));
+  scenarios.push({viewport:mobile?'mobile':'desktop',search:true,filters:true,tabs:true,zoom:true,questionnaire:true,safeText:true,dialogs:true,pause:true});dom.window.close();
+}
+console.log(JSON.stringify({passed:true,scenarios},null,2));

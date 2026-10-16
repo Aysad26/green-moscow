@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+  <title>Изразцы — плотный ступенчатый узор</title>
+  <g stroke="#366d52" stroke-width="2" stroke-linejoin="miter">
+    <path d="M26 2H38V10H46V18H54V26H62V38H54V46H46V54H38V62H26V54H18V46H10V38H2V26H10V18H18V10H26Z"/>
+    <path d="m32 16 16 16-16 16-16-16ZM32 24V40M24 32H40M0 0H8V8H0ZM56 0H64V8H56ZM0 56H8V64H0ZM56 56H64V64H56Z"/>
+  </g>
+</svg>
