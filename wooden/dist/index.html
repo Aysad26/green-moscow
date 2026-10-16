@@ -7,19 +7,15 @@
 <title>Зелёные острова Москвы — деревянный атлас</title>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/golos-text-vf.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="content.css?v=wooden-layout-5">
-<link rel="stylesheet" href="hero.css?v=wooden-layout-5">
-<link rel="stylesheet" href="style.css?v=wooden-layout-5">
-<link rel="stylesheet" href="layout.css?v=wooden-layout-5">
-<script>window.woodBootTimer=setTimeout(()=>{document.documentElement.classList.remove('is-loading');document.getElementById('loader')?.setAttribute('hidden','');document.getElementById('scene-state').textContent='Деревянная Москва';document.querySelectorAll('[data-replay]').forEach(b=>b.hidden=true)},12000)</script>
-<script src="content.js?v=wooden-layout-5" defer></script>
-<script type="module" src="app.js?v=wooden-layout-5"></script>
+<link rel="stylesheet" href="content.css?v=wooden-loader-6">
+<link rel="stylesheet" href="hero.css?v=wooden-loader-6">
+<link rel="stylesheet" href="style.css?v=wooden-loader-6">
+<link rel="stylesheet" href="layout.css?v=wooden-loader-6">
+
+<script src="content.js?v=wooden-loader-6" defer></script>
+<script type="module" src="loading.js?v=wooden-loader-6"></script>
 </head><body>
-<div class="loader" id="loader" role="status" aria-label="Загружаем деревянный город">
-    <div class="loader-top"><span>ЗЕЛЁНЫЕ ОСТРОВА МОСКВЫ</span><span class="loader-number" id="load-percent" aria-hidden="true">00</span></div>
-    <div class="loader-center" aria-hidden="true"><div class="loading-block block-one"></div><div class="loading-block block-two"></div><div class="loading-block block-three"></div><span class="loading-shadow"></span></div>
-    <div class="loader-bottom"><p>Большой город.<br><span>Маленькие детали.</span></p><div class="load-line"><span id="load-line"></span></div><span class="loader-label">СОБИРАЕМ ВСЁ НЕОБХОДИМОЕ</span></div>
-  </div><a class="skip-link" href="#about">Перейти к содержанию</a><header class="header"><div class="container header-inner">
+<div class="loader" id="loader" role="status" aria-label="Загрузка"><span class="loader-mark" aria-hidden="true"></span></div><a class="skip-link" href="#about">Перейти к содержанию</a><header class="header"><div class="container header-inner">
     <a class="brand" href="#top" aria-label="Зелёные острова Москвы — начало">
         <img class="organizer-brand" src="assets/organizer.webp" alt="Заповедное посольство" width="136" height="156">
       </a>

@@ -4,18 +4,12 @@ import {createIsland,setAssembly,createCamera,fitCamera} from './island.js';
 const canvas=document.getElementById('city-canvas');
 const stage=document.getElementById('scene-stage');
 const loader=document.getElementById('loader');
-const percent=document.getElementById('load-percent');
-const loadLine=document.getElementById('load-line');
 const status=document.getElementById('scene-state');
 const fallback=document.getElementById('scene-fallback');
 const replayButtons=[...document.querySelectorAll('[data-replay]')];
 const reduceQuery=matchMedia('(prefers-reduced-motion: reduce)');
 let reduced=reduceQuery.matches||new URLSearchParams(location.search).has('design-export');
 let app=null;
-const bootStart=performance.now();
-let shownProgress=0;
-function progress(value){shownProgress=Math.max(shownProgress,value);percent.textContent=String(shownProgress).padStart(2,'0');loadLine.style.width=shownProgress+'%'}
-function delay(ms){return new Promise(resolve=>setTimeout(resolve,ms))}
 function enableButtons(enabled){for(const b of replayButtons)b.disabled=!enabled}
 
 function woodTextures(){
@@ -38,8 +32,7 @@ function floorShadow(){
 }
 
 async function boot(){
-  progress(8);enableButtons(false);
-  const fontReady=document.fonts.ready.then(()=>progress(24));
+  enableButtons(false);
   const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:'default'});
   renderer.setPixelRatio(Math.min(devicePixelRatio,innerWidth<761?1.65:2));
   renderer.setClearColor(0xf4f0e7,0);renderer.outputColorSpace=THREE.SRGBColorSpace;
@@ -51,7 +44,7 @@ async function boot(){
   const key=new THREE.DirectionalLight(0xfff1dc,3.2);key.position.set(-5,11,7);key.castShadow=true;
   key.shadow.mapSize.set(innerWidth<761?1024:2048,innerWidth<761?1024:2048);key.shadow.camera.left=-6.5;key.shadow.camera.right=6.5;key.shadow.camera.top=8;key.shadow.camera.bottom=-5;key.shadow.camera.near=.5;key.shadow.camera.far=28;key.shadow.normalBias=.028;key.shadow.bias=-.0001;key.shadow.radius=3;scene.add(key);
   const fill=new THREE.DirectionalLight(0xf6f2e8,.5);fill.position.set(8,4,-4);scene.add(fill);
-  const textures=woodTextures();progress(42);
+  const textures=woodTextures();
   const island=createIsland((color,name)=>new THREE.MeshStandardMaterial({color,map:textures.map,bumpMap:textures.bump,bumpScale:name.startsWith('wood')?.018:.007,roughness:.83,metalness:0}));
   const pivot=new THREE.Group();pivot.add(island.root);scene.add(pivot);
   const shadow=floorShadow();scene.add(shadow);
@@ -63,14 +56,12 @@ async function boot(){
   }
   let dirty=true,raf=0,startTime=null,lastFrame=0,assemblyDone=false;
   let yaw=0,targetYaw=0,tilt=0,targetTilt=0,dragging=false,pointerId=null,startX=0,startY=0,originYaw=0;
-  setAssembly(island.parts,0);resize();renderer.render(scene,camera);progress(76);
-  await Promise.race([fontReady,delay(900)]);progress(100);
-  await delay(Math.max(0,950-(performance.now()-bootStart)));
+  setAssembly(island.parts,0);resize();renderer.render(scene,camera);
+  await window.woodResourcesReady;
   // Compile before the preloader gives way to the actual assembly.
   setAssembly(island.parts,island.duration,true);
   if(renderer.compileAsync)await renderer.compileAsync(scene,camera).catch(()=>{});
   renderer.render(scene,camera);setAssembly(island.parts,0,reduced);renderer.render(scene,camera);
-  clearTimeout(window.woodBootTimer);
   fallback.hidden=true;document.documentElement.classList.remove('is-loading');canvas.classList.add('is-ready');fallback.classList.add('is-hidden');loader.classList.add('is-leaving');
   setTimeout(()=>loader.hidden=true,650);
   enableButtons(true);
@@ -107,7 +98,8 @@ async function boot(){
   requestRender();
 }
 
-function failed(error){
-  console.warn('3D city unavailable:',error?.message||error);clearTimeout(window.woodBootTimer);document.documentElement.classList.remove('is-loading');loader.hidden=true;stage.classList.add('scene-has-error');fallback.hidden=false;fallback.classList.remove('is-hidden');status.textContent='Деревянная Москва';for(const b of replayButtons)b.hidden=true;
+async function failed(error){
+  await window.woodResourcesReady;
+  console.warn('3D city unavailable:',error?.message||error);document.documentElement.classList.remove('is-loading');loader.hidden=true;stage.classList.add('scene-has-error');fallback.hidden=false;fallback.classList.remove('is-hidden');status.textContent='Деревянная Москва';for(const b of replayButtons)b.hidden=true;
 }
 boot().catch(failed);
